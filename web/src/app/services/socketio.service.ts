@@ -13,7 +13,7 @@ export class SocketioService {
   constructor() { }
 
   setSocket(url) {
-    this.socket = io(`http://localhost:3000?roomid=${url}`);
+    this.socket = io(`http://39.96.48.75:3001?roomid=${url}`);
   }
 
   getSocket() {
