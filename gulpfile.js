@@ -36,7 +36,7 @@ function buildProd() {
 let build = gulp.series(buildDev);
 
 if (process.env.NODE_ENV == 'production') {
-    build = gulp.series(buildProd);
+    build = gulp.series(buildDev, buildProd);
 }
 
 gulp.task('default', build);
