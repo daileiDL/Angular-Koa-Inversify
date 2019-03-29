@@ -13,7 +13,7 @@ before_install:
 script:
 - cross-env NODE_ENV=production gulp
 - cd ./web
-- npm intsall
+- npm install
 - npm run build
 - cd ../
 - npm test
