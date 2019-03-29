@@ -13,8 +13,9 @@ before_install:
 script:
 - cross-env NODE_ENV=production gulp
 - cd ./web
-- ng build
+- npm run build
 - cd ../
+- npm test
 
 after_script:
 - scp -r -o StrictHostKeyChecking=no dist/** root@39.96.48.75:/home/www/Angular-Koa-Inversify
