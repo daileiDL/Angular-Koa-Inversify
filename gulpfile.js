@@ -20,7 +20,7 @@ function buildProd() {
         .pipe(rollup({
             input: './config/index.ts',
             output: {
-                format: 'cjs'
+                format: 'es'
             },
             plugins: [
                 replace({
