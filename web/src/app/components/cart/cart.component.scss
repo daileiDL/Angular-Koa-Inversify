@@ -1,0 +1,263 @@
+@charset "UTF-8";
+.cart_content{
+    
+    padding: 1rem;
+    
+    /*头部信息*/
+    .cart_info{
+        
+        background: #fff;
+        
+        h2{
+            text-align: center;
+            font-size: 1.8rem;
+            padding: .8rem 0px;
+            border-bottom: 1px solid #eee;
+        }
+        border-radius:.5rem;
+        padding: .5rem;
+        .p_number{
+            
+            
+            display: flex;
+            
+            padding: .5rem 0;
+            border-bottom: 1px solid #eee;
+            
+            .p_number_left{
+                
+                flex: 1;
+                
+                 
+                p{
+                    line-height: 2;
+                    
+                    &:first-child{
+                        
+                        color: red;
+                    }
+                }
+            }
+            
+            .p_number_right{
+                width: 4rem;
+                height: 4rem;
+                text-align: center;
+                
+                img{
+                    
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    margin: 0 auto;
+                }
+            }
+            
+            
+            
+        }
+        
+        /*购物车总数量*/
+        
+        
+       .cart_p_num{
+           border-bottom: 1px solid #eee;
+           p{
+               
+               line-height: 2;
+               
+               .price{
+                   
+                   font-size: 2.4rem;
+                   color:red;
+               }
+
+               strong {
+
+                    font-weight: bold;
+
+               }
+           }
+       }
+        
+        
+    }
+    /*购物车列表*/
+   
+   .cart_list{
+       margin-top: 1rem;
+       
+       padding: .5rem;
+       
+       background: #fff;
+       
+       border-radius: .5rem;
+       
+       
+       
+       display: flex;
+       
+       ul{
+           width: 100%;
+           
+             .item{
+                    display: flex;
+                    width:100%;
+                    
+                     border-bottom: 1px solid #eee;
+                    
+                    padding: 1rem 0px;
+                   .left_food{
+                       flex: 1;
+                       
+                       display: flex;                       
+                       img{
+                            width: 4rem;
+                            height: 4rem;
+                            border-radius: 10%;
+                            margin-right: .8rem;
+                                                   
+                       }
+                       
+                       .food_info{
+                           
+                           flex: 1;
+                       }
+                       
+                       
+                   }
+                   
+                   .right_cart{
+                       
+                       width: 10rem;
+                   }
+           }
+       }
+     
+       
+      
+   }
+   
+   /*最长点的菜*/
+  
+  .hot_food{
+      
+      background: #fff;
+      
+      margin-top: 1rem;
+      
+      border-radius: .5rem;
+      
+      margin-bottom: 4rem;
+      
+      h3{
+          
+          font-size: 1.4rem;
+          
+          padding: .5rem 0px;
+      }
+      
+      .item_list_outer{
+          
+            width: 100%;
+            
+            overflow-x:auto;
+            .item_list{
+          
+             
+                padding: 0px .5rem;                
+                width: 50rem;
+                
+                li{
+                    
+                        width: 8rem;
+                        padding: .5rem;
+                        box-sizing: border-box;                    
+                        float: left;
+                        
+                        .inner{
+                                background: #fff;
+                                width: 100%;
+                                border-radius: .5rem;
+                                overflow: hidden;
+                                
+                                img{
+                                    
+                                    width:100%;
+                                }
+                                
+                        }
+                }
+          }
+      
+          
+      }
+    
+      
+      
+       
+  }
+    
+    
+}
+
+/*购车加减*/
+.cart_num{
+          
+      width: 10rem;      
+      
+      display: flex;
+      margin-top: .8rem;
+      
+      
+      .input_left,.input_right{
+          flex: 1;
+          
+          width: 2.8rem;
+          height: 2.8rem;
+          
+          line-height: 2.8rem;
+          
+          text-align: center;
+          
+          color: red;
+          
+          border: 1px solid #eee;
+          
+          font-size: 2.4rem;
+      }    
+      
+      .input_center{
+          
+          flex: 1;
+          
+          input{
+              
+               width: 2rem;
+               text-align: center;
+                width: 100%;
+                height: 2.8rem; 
+                border: none;
+                
+                 border-top: 1px solid #eee;
+                 
+                 border-bottom: 1px solid #eee;
+          
+                 float: left;
+          }
+      }
+  }
+  
+
+
+/*购车空*/
+
+
+.cart_empty{
+    
+    text-align: center;
+    line-height: 3;
+    
+    h3{
+        font-size: 1.8rem;
+    }
+}

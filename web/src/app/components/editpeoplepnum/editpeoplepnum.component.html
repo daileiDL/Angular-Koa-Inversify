@@ -1,0 +1,53 @@
+<div  class="start_content">			
+  
+  <header class="start_header">				
+    <img src="../../../assets/images/canju.png"/> 用餐人数
+  </header>			
+  
+  <p class="notice">请选择正确的用餐人数 ，小二马上给你送餐具</p>
+        
+  <div class="content">
+    <ul class="user_list" id="user_list">
+      <li class="active" *ngFor="let item of list; let key = index;" [ngClass]="{active:p_num == key + 1}"> 						
+        <span>{{item}}</span>
+      </li>
+    </ul>
+
+    <div class="mark_input">
+        <input type="text" [(ngModel)]='p_mark' placeholder="请输入您的口味要求，忌口等（可不填）"/>
+    </div>
+
+  
+    <ul class="mark_list">
+        <li>						
+            <span>打包带走</span>
+        </li>
+        <li>
+            <span>
+              不要放辣椒
+            </span>
+        </li>
+        <li>
+            <span>
+              微辣
+            </span>
+        </li>
+    </ul>
+  </div>
+    
+</div>
+
+
+
+
+<div id="start_cancel" class="start_cancel" (click)="cancel()">
+    <span>
+            取消
+    </span>
+ </div>
+
+  <div id="start_ok" class="start_ok" (click)="addPeopleInfo()">
+          <span>
+                确定
+          </span>
+  </div>

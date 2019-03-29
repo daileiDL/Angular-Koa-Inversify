@@ -1,0 +1,53 @@
+<div class="order_content">
+			
+    <div class="order_info">
+          
+          <div class="order_top">
+            <img src="../../../assets/images/timer.png" />	       		       		      			
+            <div class="order_info_right">
+              <h2>{{list['uid']}}号桌待门店接单</h2>
+              <p>请及时联系服务员确认一点菜品信息!</p>
+            </div>	 
+          </div>
+          
+          
+          <h3>已点菜品 {{list['total_num']}} 份,合计 : <span class="price">{{list['total_price']}}元</span> </h3>
+                   
+      </div>
+      
+      <!--订单列表-->
+      
+      <div class="order_list">
+        
+          <h3>菜品详情:</h3>
+          <ul class="list">
+            <li *ngFor="let item of list['items']">
+              <div class="title">
+                {{item.title}} / {{item.status == 1 ? '已下厨' : '已退菜'}}
+              </div>
+                
+              <div class="num">
+                
+                {{item.num}}份
+              </div>
+              
+              
+              <div class="price">
+                
+                {{item.price * item.num}}元
+              </div>
+          
+            </li>
+          </ul>
+      
+      </div>
+
+      <a routerLink="/home">
+        <div id="footer_book" class="footer_book">
+          <img src="../../../assets/images/menu.png" />
+          <p>菜单</p>
+        </div>
+      </a>
+      
+   
+ </div>

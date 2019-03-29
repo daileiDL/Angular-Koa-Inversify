@@ -1,0 +1,58 @@
+.search_header{
+    
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    width: 100%;
+    
+    .search{
+        
+        width: 90%;
+        
+        height: 3.8rem;
+        
+        line-height:3.8rem;
+        
+        border-radius: .5rem;
+        
+        border: 1px solid #eee;
+    }
+}
+
+
+.search_content{
+    
+    background:#fff;
+    
+    
+    .item_list{
+        
+        padding:0rem .5rem;
+        
+        li{
+            
+            display: flex;
+            
+            border-bottom: 1px solid #EEE;
+            
+            padding-top: 1rem;
+            
+            padding-bottom: 1rem;
+            img{
+                
+                    width: 6rem;
+                    height: 6rem;
+            }
+            
+            .inner{
+                
+                flex: 1;
+                
+                padding-left: 1rem;
+            }
+        }
+    }
+    
+    
+    
+}

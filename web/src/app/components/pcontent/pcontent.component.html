@@ -1,0 +1,35 @@
+<a routerLink='/home'>
+  <div class="back">返回</div>
+</a>		
+		<div class="p_content">		
+			<div class="p_info">				
+				<img src="{{url}}{{food['img_url'] }}"/>				
+				<h2>{{ food['title'] }}</h2>				
+				<p class="price">{{ food['price'] }}/份</p>
+			</div>
+			<div class="p_detial">
+				<h3>
+					商品详情					
+				</h3>
+				<div class="p_content" [innerHTML]="food['content']"> 
+				</div>
+			</div>
+		</div>
+		
+		
+		<footer class="pfooter">
+			
+			<div class="cart">				
+				<strong>数量:</strong>
+				<div class="cart_num">
+		          <div class="input_left" (click)="decNum()">-</div>
+		          <div class="input_center">
+		              <input type="text"  readonly="readonly" [(ngModel)]="num"/>
+		          </div>
+		          <div class="input_right" (click)="incNum()">+</div>				      
+		        </div>								
+			
+			</div>
+			
+			<button class="addcart" (click)="addCart()">加入购物车</button>			
+		</footer>

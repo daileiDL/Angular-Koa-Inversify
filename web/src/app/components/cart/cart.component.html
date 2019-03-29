@@ -1,0 +1,152 @@
+<div class="cart_content">
+
+  <div class="cart_info" *ngIf="totalNum">
+
+
+    <h2>购物车</h2>
+
+    <div class="p_number">
+      <div class="p_number_left">
+        <p>用餐人数: {{peopleNum.p_num}}</p>
+        <p>备注: {{peopleNum.p_mark}}</p>
+      </div>
+
+      <div class="p_number_right">
+        <a routerLink="/editpeoplenum">
+          <img src="../../../assets/images/edit.png" />
+          <p>修改</p>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="cart_p_num">
+
+      <p>购物车中总共有
+        <strong>{{totalNum}}</strong> 个菜</p>
+
+      <p>合计：
+        <span class="price">¥{{totalPrice}}</span>
+      </p>
+    </div>
+  </div>
+
+
+
+  <div class="cart_list" *ngIf="totalNum">
+
+
+    <ul>
+      <li class="item" *ngFor="let item of list; let key = index;">
+        <div class="left_food">
+          <img src="{{url}}{{item.img_url}}" />
+          <div class="food_info">
+            <p>{{item.title}}</p>
+            <p class="price">¥{{item.price}}</p>
+          </div>
+
+        </div>
+
+        <div class="right_cart">
+          <div class="cart_num">
+            <div class="input_left" (click)="decNum(item, key)">-</div>
+            <div class="input_center">
+              <input type="text" readonly="readonly" [(ngModel)]="item.num" name="num" id="num" />
+            </div>
+            <div class="input_right" (click)="incNum(item)">+</div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <div class="hot_food">
+
+    <h3>本店顾客最长点的菜</h3>
+
+    <div class="item_list_outer">
+      <ul class="item_list">
+        <li>
+          <div class="inner">
+            <img src="../../../assets/images/1.jpg" />
+            <p class="title">大蒜腊肉</p>
+            <p class="price">¥26</p>
+          </div>
+        </li>
+
+        <li>
+          <div class="inner">
+            <img src="../../../assets/images/2.jpg" />
+
+            <p class="title">家乡扣肉</p>
+
+            <p class="price">¥26</p>
+          </div>
+
+        </li>
+
+        <li>
+          <div class="inner">
+            <img src="../../../assets/images/1.jpg" />
+            <p class="title">大蒜腊肉</p>
+            <p class="price">¥26</p>
+          </div>
+        </li>
+
+        <li>
+          <div class="inner">
+            <img src="../../../assets/images/2.jpg" />
+
+            <p class="title">家乡扣肉</p>
+
+            <p class="price">¥26</p>
+          </div>
+
+        </li>
+
+        <li>
+          <div class="inner">
+            <img src="../../../assets/images/2.jpg" />
+
+            <p class="title">家乡扣肉</p>
+
+            <p class="price">¥26</p>
+          </div>
+
+        </li>
+
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="info" *ngIf="!totalNum">
+    请选择下面的菜单按钮继续点菜
+  </div>
+</div>
+
+
+<!-- <div id="footer_nav" class="footer_nav">
+  <img src="../../../assets/images/navigation.png" />
+  <p>导航</p>
+</div> -->
+
+<app-navfooter></app-navfooter>
+
+<a routerLink="/home">
+  <div id="footer_book" class="footer_book">
+    <img src="../../../assets/images/menu.png" />
+    <p>菜单</p>
+  </div>
+</a>
+
+
+<div (click)="addOrder()" id="footer_cart" class="footer_cart">
+  <img src="../../../assets/images/cart.png" />
+  <p>下单</p>
+</div>
